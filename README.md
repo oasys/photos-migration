@@ -29,9 +29,9 @@ Import all photos, and check the final count of images/videos.
 
 ## Transcode
 
-If not all the photos import, it is possible that some
-of them may have failed due to (incompatible media
-types)[https://support.apple.com/en-us/HT209029].  These will need to be
+If not all the files import, it is possible that some
+of them may have failed due to [incompatible media
+types](https://support.apple.com/en-us/HT209029).  These will need to be
 transcoded to a supported file type.
 
 ### getlist.pl
