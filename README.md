@@ -39,3 +39,15 @@ transcoded to a supported file type.
 Parses the system log for failed imports and outputs the list of files.
 
     getlist.pl > files
+
+### transcode.sh
+
+Transcodes videos to HEVC/h.265 format.
+
+    cd compare-out ; ls -1 | tr '\n' '\0' | xargs -0 -n1 ../transcode.sh
+
+### Re-import
+
+Attempt to re-import the transcoded files.
+
+## Clean up
