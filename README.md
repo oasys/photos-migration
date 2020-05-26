@@ -34,11 +34,11 @@ of them may have failed due to [incompatible media
 types](https://support.apple.com/en-us/HT209029).  These will need to be
 transcoded to a supported file type.
 
-### getlist.pl
+### getfailed.pl
 
 Parses the system log for failed imports and outputs the list of files.
 
-    getlist.pl > files
+    getfailed.pl > files
 
 ### transcode.sh
 

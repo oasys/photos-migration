@@ -1,4 +1,6 @@
 #!/usr/bin/perl
+#
+# parse system log for list of filenames that failed to import
 
 use strict;
 
