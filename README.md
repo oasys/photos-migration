@@ -34,17 +34,21 @@ of them may have failed due to [incompatible media
 types](https://support.apple.com/en-us/HT209029).  These will need to be
 transcoded to a supported file type.
 
-### getfailed.pl
+### getfailed.pl and fixfailed.pl
 
-Parses the system log for failed imports and outputs the list of files.
+Parses the system log for failed imports and outputs the list of files
+so that the files can be copied (hard linked) into a different output
+directory.  Run from the directory above `compare-out`; will create a
+`to-be-transcoded` output directory and link all media and sidecar
+files here.
 
-    getfailed.pl > files
+    getfailed.pl | fixfailed.pl
 
 ### transcode.sh
 
 Transcodes videos to HEVC/h.265 format.
 
-    cd compare-out ; ls -1 | tr '\n' '\0' | xargs -0 -n1 ../transcode.sh
+    cd to-be-transcoded; ls -1 | tr '\n' '\0' | xargs -0 -n1 ../transcode.sh
 
 ### Re-import
 
