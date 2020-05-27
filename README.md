@@ -1,5 +1,14 @@
 # Scripts to aid macOS photos migration
 
+Collection of ad-hoc scripts used to merge multiple photo libraries for
+import into macOS Photos.app.
+
+It addresses issues such as:
+
+- only import unique files (no duplicates)
+- re-encode media types that are no longer supported
+- preserve metadata
+
 ## Export
 
 If these are in separate photo libraries, first export all files
