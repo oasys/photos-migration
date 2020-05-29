@@ -22,7 +22,10 @@ args=(
 )
 
 if [ ! -r "$FILE" ] ; then
-  echo "Unabled to read $FILE"
+  echo "Unabled to read input file $FILE"
+  exit 2
+elif [ -e "$OUTFILE" ] ; then
+  echo "Output file $OUTFILE already exists, skipping."
   exit 2
 else
   ffmpeg -i "$FILE" "${args[@]}" "$OUTFILE"
