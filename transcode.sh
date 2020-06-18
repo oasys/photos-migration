@@ -33,5 +33,6 @@ elif [ -e "$OUTFILE" ] ; then
   echo "Output file $OUTFILE already exists, skipping."
   exit 2
 else
+  set -x
   ffmpeg -i "$FILE" "${args[@]}" "$OUTFILE"
 fi
