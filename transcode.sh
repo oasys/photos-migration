@@ -21,6 +21,11 @@ args=(
  -c:a aac -b:a 128k                    # audio options
 )
 
+# this old camera has garbled color output without this option
+if [ "CanonMVI06" = "$(exiftool -t -Software "$FILE" | cut -f2)" ] ; then
+  args+=(-pix_fmt yuvj420p)
+fi
+
 if [ ! -r "$FILE" ] ; then
   echo "Unabled to read input file $FILE"
   exit 2
